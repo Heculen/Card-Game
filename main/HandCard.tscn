@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://ipscg7ckj0w5"]
+
+[ext_resource type="Script" uid="uid://bbsguksnv35r1" path="res://卡牌/卡牌文件/handcard.gd" id="1_5vest"]
+[ext_resource type="Resource" uid="uid://3p88rd5klnha" path="res://卡牌/卡牌数据/card/山海经/boneca.tres" id="2_35dqh"]
+[ext_resource type="Texture2D" uid="uid://cokusrg5pnaao" path="res://卡牌/卡图/山海经/变异异兽.PNG" id="2_d42o7"]
+[ext_resource type="Texture2D" uid="uid://cmdoorsrfya7u" path="res://icon.svg" id="3_f4chg"]
+[ext_resource type="Texture2D" uid="uid://b04hi4ytmabc2" path="res://卡牌/卡图/卡背.png" id="3_gj1ee"]
+
+[sub_resource type="Animation" id="Animation_35dqh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_back:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("card_back:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.74799997, 0.7471429)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("card_front:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_d42o7")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("card_front:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("card_front:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_f4chg"]
+resource_name = "card_clip"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_back:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("card_back:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.74799997, 0.7471429), Vector2(0.063, 0.747)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("card_front:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_d42o7")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("card_front:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.063, 1), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("card_front:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gj1ee"]
+_data = {
+&"RESET": SubResource("Animation_35dqh"),
+&"card_clip": SubResource("Animation_f4chg")
+}
+
+[node name="HandCard" type="Node2D" unique_id=2048583143]
+script = ExtResource("1_5vest")
+card_message = ExtResource("2_35dqh")
+
+[node name="card_front" type="Sprite2D" parent="." unique_id=1273027059]
+texture = ExtResource("2_d42o7")
+
+[node name="card_back" type="Sprite2D" parent="." unique_id=1648209419]
+position = Vector2(5.722046e-06, 0.5)
+scale = Vector2(0.74799997, 0.7471429)
+texture = ExtResource("3_gj1ee")
+
+[node name="召唤" type="Button" parent="." unique_id=1412781298]
+visible = false
+offset_left = -78.0
+offset_top = -467.0
+offset_right = 58.0
+offset_bottom = -285.0
+text = "召唤"
+icon = ExtResource("3_f4chg")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1594741632]
+libraries/ = SubResource("AnimationLibrary_gj1ee")
+
+[node name="Button" type="Button" parent="." unique_id=953008894]
+offset_left = -189.0
+offset_top = -261.0
+offset_right = -167.66838
+offset_bottom = -241.12868
+scale = Vector2(17.626417, 26.520622)
+flat = true
+
+[connection signal="pressed" from="召唤" to="." method="_on_召唤_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bslrb333cllb0"]
+
+[ext_resource type="Script" uid="uid://cicmy7whf6nim" path="res://main/start.gd" id="1_8blt0"]
+
+[node name="Start" type="Node" unique_id=605236915]
+script = ExtResource("1_8blt0")
+
+[node name="laod" type="Node2D" parent="." unique_id=875569628]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1318998888]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=297126144]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Control" unique_id=706248932]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 282.0
+offset_right = 801.0
+offset_bottom = 344.0
+placeholder_text = "地址"
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=605102095]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 439.0
+offset_right = 528.0
+offset_bottom = 485.0
+text = "创建房间"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control" unique_id=1053587474]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 439.0
+offset_right = 757.0
+offset_bottom = 485.0
+text = "加入房间"
