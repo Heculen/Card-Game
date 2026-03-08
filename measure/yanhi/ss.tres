@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="KaduijiaCard" format=3 uid="uid://bj5nqxit0mvab"]
+
+[ext_resource type="Script" uid="uid://drtq7my43b8oq" path="res://measure/卡堆加卡.gd" id="1_0ejli"]
+[ext_resource type="Script" uid="uid://b1mnwc3f2v58l" path="res://measure/卡组加、弃卡卡筛选.gd" id="2_msorr"]
+[ext_resource type="Script" uid="uid://bjorj057ifs0o" path="res://卡牌/卡牌文件/taps.gd" id="3_ccxy5"]
+
+[sub_resource type="Resource" id="Resource_hh7gu"]
+script = ExtResource("2_msorr")
+metadata/_custom_type_script = "uid://b1mnwc3f2v58l"
+
+[resource]
+script = ExtResource("1_0ejli")
+shixuan = SubResource("Resource_hh7gu")
+metadata/_custom_type_script = "uid://drtq7my43b8oq"

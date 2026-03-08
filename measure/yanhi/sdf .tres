@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="AndChecks" format=3 uid="uid://bduplt88rhh4y"]
+
+[ext_resource type="Script" uid="uid://cuvcx1134ujov" path="res://measure/cliptool.gd" id="1_ikcub"]
+[ext_resource type="Script" uid="uid://dnak80gwf4clm" path="res://measure/和判断.gd" id="2_fqekx"]
+
+[resource]
+script = ExtResource("2_fqekx")
+metadata/_custom_type_script = "uid://dnak80gwf4clm"

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="TurnCheck" format=3 uid="uid://8ifs5s8imxj7"]
+
+[ext_resource type="Script" uid="uid://d2qxodufamk5g" path="res://measure/回合阶段检查.gd" id="1_c1bmg"]
+
+[resource]
+script = ExtResource("1_c1bmg")
+metadata/_custom_type_script = "uid://d2qxodufamk5g"
