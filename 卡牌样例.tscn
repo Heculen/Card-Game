@@ -1,0 +1,263 @@
+[gd_scene format=3 uid="uid://brhmmhfxk1e3t"]
+
+[ext_resource type="StyleBox" uid="uid://c005uvtsu1ymx" path="res://卡牌/卡牌数据/card/道具卡卡框.tres" id="1_enh2p"]
+[ext_resource type="Texture2D" uid="uid://cmdoorsrfya7u" path="res://icon.svg" id="1_wtqig"]
+[ext_resource type="Texture2D" uid="uid://d1dc8lqw1uix8" path="res://卡牌/卡图/山海经/aaa.png" id="2_enh2p"]
+[ext_resource type="Theme" uid="uid://cjc3jq8xose5l" path="res://zhengti.tres" id="2_s4dsp"]
+[ext_resource type="LabelSettings" uid="uid://bs6e6imssmp7x" path="res://new_label_settings.tres" id="5_enh2p"]
+[ext_resource type="Shader" uid="uid://b1qc71qk50exp" path="res://卡牌样例.gdshader" id="6_dkr4u"]
+[ext_resource type="LabelSettings" uid="uid://ceqr16h7amfhx" path="res://卡牌/卡牌数据/card/效果卡简介.tres" id="7_04sdk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5i518"]
+texture = ExtResource("2_enh2p")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i518"]
+bg_color = Color(0.6, 0.6, 0.6, 0.6156863)
+
+[sub_resource type="LabelSettings" id="LabelSettings_04sdk"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ory4m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n6mg2"]
+shader = ExtResource("6_dkr4u")
+shader_parameter/col = Color(1, 1, 0.29411766, 1)
+shader_parameter/tex = ExtResource("1_wtqig")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_enh2p"]
+shader = ExtResource("6_dkr4u")
+shader_parameter/col = Color(0.88975686, 0, 0.2284526, 1)
+shader_parameter/tex = ExtResource("1_wtqig")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkr4u"]
+shader = ExtResource("6_dkr4u")
+shader_parameter/col = Color(1, 1, 1, 1)
+shader_parameter/tex = ExtResource("1_wtqig")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_04sdk"]
+shader = ExtResource("6_dkr4u")
+shader_parameter/col = Color(0.5011153, 0.00019464076, 0.5070466, 1)
+shader_parameter/tex = ExtResource("1_wtqig")
+
+[node name="Node2D" type="Node2D" unique_id=1951793683]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=150704930]
+offset_left = 338.0
+offset_top = 804.0
+offset_right = 961.0
+offset_bottom = 1621.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=425490201]
+disable_3d = true
+handle_input_locally = false
+size = Vector2i(500, 700)
+render_target_update_mode = 4
+
+[node name="卡牌" type="Control" parent="SubViewportContainer/SubViewport" unique_id=1408728565]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="底面" type="PanelContainer" parent="SubViewportContainer/SubViewport/卡牌" unique_id=18078894]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = ExtResource("1_enh2p")
+
+[node name="卡图" type="PanelContainer" parent="SubViewportContainer/SubViewport/卡牌/底面" unique_id=2088790065]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5i518")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图" unique_id=1278545608]
+layout_mode = 2
+
+[node name="ming" type="PanelContainer" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer" unique_id=793533058]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+theme_override_styles/panel = SubResource("StyleBoxFlat_5i518")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/ming" unique_id=1889035079]
+layout_mode = 2
+
+[node name="name" type="RichTextLabel" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/ming/HBoxContainer" unique_id=2009420343]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+theme = ExtResource("2_s4dsp")
+bbcode_enabled = true
+text = "[color=black][font_size=40]AI山海经-山海生成器[/font_size][/color]"
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/ming/HBoxContainer" unique_id=1688088774]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_wtqig")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="xiaodian" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/ming/HBoxContainer" unique_id=697793421]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "3"
+label_settings = SubResource("LabelSettings_04sdk")
+
+[node name="tu" type="Panel" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer" unique_id=1426054028]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 14.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ory4m")
+
+[node name="shuju" type="PanelContainer" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer" unique_id=204428850]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_5i518")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju" unique_id=108079514]
+layout_mode = 2
+
+[node name="atk_lab" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=543015919]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ATK"
+label_settings = ExtResource("5_enh2p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="atk" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=1233127364]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "700"
+label_settings = ExtResource("5_enh2p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hea_lab" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=523195011]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "HEA"
+label_settings = ExtResource("5_enh2p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hea" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=1517784259]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "600"
+label_settings = ExtResource("5_enh2p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="jie_lab" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=143613745]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "JIE"
+label_settings = ExtResource("5_enh2p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="jie" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=1699859520]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+label_settings = ExtResource("5_enh2p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sx" type="TextureRect" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=965525722]
+material = SubResource("ShaderMaterial_n6mg2")
+layout_mode = 2
+texture = ExtResource("1_wtqig")
+expand_mode = 2
+
+[node name="sxx" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=778746237]
+layout_mode = 2
+text = "3"
+label_settings = ExtResource("5_enh2p")
+
+[node name="sp" type="TextureRect" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=455538895]
+material = SubResource("ShaderMaterial_enh2p")
+layout_mode = 2
+texture = ExtResource("1_wtqig")
+expand_mode = 2
+
+[node name="spp" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=251925050]
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("5_enh2p")
+
+[node name="dx" type="TextureRect" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=1256643686]
+material = SubResource("ShaderMaterial_dkr4u")
+layout_mode = 2
+texture = ExtResource("1_wtqig")
+expand_mode = 2
+
+[node name="dxx" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=1029489917]
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("5_enh2p")
+
+[node name="dp" type="TextureRect" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=987894422]
+material = SubResource("ShaderMaterial_04sdk")
+layout_mode = 2
+texture = ExtResource("1_wtqig")
+expand_mode = 2
+
+[node name="dpp" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/shuju/HBoxContainer" unique_id=1085951787]
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("5_enh2p")
+
+[node name="biaoqian" type="PanelContainer" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer" unique_id=1811300835]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_5i518")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/biaoqian" unique_id=754787313]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/biaoqian/HBoxContainer" unique_id=1318281546]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[bgcolor=black][color=white][font_size=15]ikun[/font_size][/color][/bgcolor]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/biaoqian/HBoxContainer" unique_id=1543926920]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="ColorRect2" type="ColorRect" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/biaoqian/HBoxContainer" unique_id=1254032266]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="xiaoguo" type="PanelContainer" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer" unique_id=1581482828]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5i518")
+
+[node name="leixing" type="Label" parent="SubViewportContainer/SubViewport/卡牌/底面/卡图/VBoxContainer/xiaoguo" unique_id=1893026995]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+text = "①在每个自己的回合有一次，从卡组、卡堆中各把一张[AI山海经]卡加入手卡
+②在每个自己的回合有一次，在自己场上的非上级[AI山海经]角色被效果破坏时可以发动，将被破坏的其中一张[AI山海经]角色卡从卡堆中不支付笑点召唤到自己战斗区的任意位置"
+label_settings = ExtResource("7_04sdk")
+autowrap_mode = 2

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dcx1am6dwmr81"]
+
+[ext_resource type="Script" uid="uid://bpr2hevpfjti2" path="res://卡牌/卡牌文件/chang_card.gd" id="1_1aawe"]
+[ext_resource type="Texture2D" uid="uid://cokusrg5pnaao" path="res://卡牌/卡图/山海经/变异异兽.PNG" id="1_wvmdj"]
+[ext_resource type="FontFile" uid="uid://c0vwf1hohtq8n" path="res://字体/simhei.ttf" id="3_1b5rl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glgyu"]
+size = Vector2(376, 524)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ur8dw"]
+font = ExtResource("3_1b5rl")
+font_size = 55
+
+[node name="ChangCard" type="Node2D" unique_id=1417753347]
+script = ExtResource("1_1aawe")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=580327835]
+texture = ExtResource("1_wvmdj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1111765934]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1097007300]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_glgyu")
+
+[node name="atkhea" type="Label" parent="." unique_id=715777353]
+offset_left = -42.0
+offset_top = 276.0
+offset_right = 41.0
+offset_bottom = 332.0
+text = "0/0"
+label_settings = SubResource("LabelSettings_ur8dw")
